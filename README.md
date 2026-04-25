@@ -11,7 +11,7 @@ Built on MikroTik RouterOS 7, WireGuard, Pi-hole, TrueNAS, and Linux.
 |------|--------|------|
 | Home | MikroTik RB760iGS | Core router, WireGuard server, QoS |
 | Work | MikroTik RB2011 | Branch router, WireGuard client |
-| Home | Raspberry Pi | Pi-hole DNS + DHCP |
+| Home | Raspberry Pi | Pi-hole DNS |
 | Home | TrueNAS | NAS, SMB shares, n8n automation |
 | Home | Linux Server | SSH, game server, Docker |
 | Home | Windows Server | RDP, Active Directory |
