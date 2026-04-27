@@ -121,13 +121,13 @@ set allow-remote-requests=yes max-udp-packet-size=512 servers=\
 
 
 /ip firewall address-list
-add address=192.168.88.35 list=Mazen
-add address=192.168.88.36 list=Mazen
-add address=192.168.88.37 list=Mazen
-add address=192.168.88.100 list=Mazen
-add address=192.168.88.101 list=Mazen
-add address=192.168.88.102 list=Mazen
-add address=192.168.88.26 list=Mazen
+add address=192.168.88.35 list=Admin
+add address=192.168.88.36 list=Admin
+add address=192.168.88.37 list=Admin
+add address=192.168.88.100 list=Admin
+add address=192.168.88.101 list=Admin
+add address=192.168.88.102 list=Admin
+add address=192.168.88.26 list=Admin
 add address=192.168.88.100 disabled=yes list=DNS
 add address=192.168.88.19 disabled=yes list=DNS
 add address=192.168.88.4 disabled=yes list=DNS
