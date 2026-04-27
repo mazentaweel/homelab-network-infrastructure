@@ -10,7 +10,7 @@ add add-default-route=yes disabled=no interface=ether1 max-mtu=1492 name=\
 
 /interface wireguard
 add disabled=yes listen-port=61853 mtu=1420 name=DO-VPS
-add listen-port=443 mtu=1420 name=WG-Mikrotik-Home
+add listen-port=443 mtu=1420 name=WG-Mikrotik-A
 
 
 /interface list
@@ -64,12 +64,12 @@ set udp-timeout=10s
 /interface list member
 add comment=defconf interface=bridge list=LAN
 add comment=defconf interface="Paltel Fiber" list=WAN
-add disabled=yes interface=WG-Mikrotik-Home list=LAN
+add disabled=yes interface=WG-Mikrotik-A list=LAN
 
 
 /interface wireguard peers
 add allowed-address="192.168.100.3/32,192.168.2.0/24,192.168.1.0/24,192.168.25\
-    3.0/24,192.168.88.0/24" interface=WG-Mikrotik-Home name="Admin" \
+    3.0/24,192.168.88.0/24" interface=WG-Mikrotik-A name="Admin" \
     public-key="YOUR_PUBLIC_KEY"
 
 
@@ -77,7 +77,7 @@ add allowed-address=\
     192.168.100.1/32,192.168.2.0/24,192.168.253.0/24,192.168.90.0/24 \
     client-allowed-address=::/0 endpoint-address=\
     YOUR_ENDPOINT endpoint-port=443 interface=\
-    WG-Mikrotik-Home name=A-To-B public-key=\
+    WG-Mikrotik-A name=A-To-B public-key=\
     "YOUR_PUBLIC_KEY"
 
 
@@ -91,7 +91,7 @@ add allowed-address=10.66.66.7/24 disabled=yes endpoint-address=\
 add address=192.168.88.1/24 comment=defconf interface=bridge network=\
     192.168.88.0
 add address=192.168.1.1/24 interface=bridge network=192.168.1.0
-add address=192.168.100.2/24 interface=WG-Mikrotik-Home network=192.168.100.0
+add address=192.168.100.2/24 interface=WG-Mikrotik-A network=192.168.100.0
 add address=10.66.66.7 interface=DO-VPS network=10.66.66.7
 
 
@@ -352,9 +352,9 @@ add check-gateway=ping disabled=no distance=1 dst-address=208.67.222.222/32 \
     gateway=DO-VPS pref-src=0.0.0.0 routing-table=main scope=30 target-scope=\
     10
 add disabled=no distance=1 dst-address=192.168.253.0/24 gateway=\
-    WG-Mikrotik-Home pref-src=0.0.0.0 routing-table=main scope=10
+    WG-Mikrotik-A pref-src=0.0.0.0 routing-table=main scope=10
 add disabled=no distance=1 dst-address=192.168.2.0/24 gateway=\
-    WG-Mikrotik-Home pref-src="" routing-table=main scope=10
+    WG-Mikrotik-A pref-src="" routing-table=main scope=10
 add disabled=no distance=3 dst-address=208.67.220.220/32 gateway=\
     "Paltel Fiber" pref-src=0.0.0.0 routing-table=main
 add disabled=no distance=3 dst-address=208.67.222.222/32 gateway=\
@@ -373,7 +373,7 @@ add check-gateway=ping disabled=no distance=1 dst-address=208.67.220.220/32 \
     gateway=DO-VPS pref-src=0.0.0.0 routing-table=main scope=30 target-scope=\
     10
 add disabled=no distance=1 dst-address=192.168.90.0/24 gateway=\
-    WG-Mikrotik-Home routing-table=main scope=10 target-scope=10
+    WG-Mikrotik-A routing-table=main scope=10 target-scope=10
 
 
 /ip service
