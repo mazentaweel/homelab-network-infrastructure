@@ -6,7 +6,7 @@ Built on MikroTik RouterOS 7, WireGuard, Pi-hole, TrueNAS, and Linux.
 ---
 
 ## 🗺️ Network Overview
-
+![Network Topology](diagrams/network-topology.png)
 | Site | Device | Role |
 |------|--------|------|
 | Home | MikroTik RB760iGS | Core router, WireGuard server, QoS |
