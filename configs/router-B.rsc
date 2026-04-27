@@ -324,8 +324,8 @@ add dont-require-permissions=yes name=LogFilter owner=ADMIN policy=\
     ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon source=":\
     local myserver ([/system identity get name])\
     \n:local scheduleName \"LogFilter\"\
-    \n:local bot \"718091834:AAEzW3O1lXn9jv97TDP8Gw8vOMPt5gC3p04\"\
-    \n:local ChatID \"727793683\"\
+    \n:local bot \"YOUR_BOT_TOKEN\"\
+    \n:local ChatID \"YOUR_CHAT_ID\"\
     \n:local startBuf [:toarray [/log find message~\" failure\" || message~\"l\
     oop\" || message~\"down\" || message~\"fcs\" || message~\"excessive\" || m\
     essage~\"logged\"]]\
@@ -508,9 +508,9 @@ add dont-require-permissions=yes name="Ala night disable" owner=ADMIN policy=\
 
 add dont-require-permissions=yes name=reboot-check owner=ADMIN policy=\
     ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon source=":\
-    local botToken \"718091834:AAEzW3O1lXn9jv97TDP8Gw8vOMPt5gC3p04\"\
+    local botToken \"YOUR_BOT_TOKEN\"\
     \n\
-    \n:local chatId \"727793683\"\
+    \n:local chatId \"YOUR_CHAT_ID\"\
     \n\
     \n:local routerName [/system identity get name]\
     \n:local uptime [/system resource get uptime]\
