@@ -146,7 +146,6 @@ add address=192.168.88.44 disabled=yes list=DNS
 add address=192.168.88.16 disabled=yes list=DNS
 add address=192.168.1.13 list=DNS
 add address=192.168.88.1 list=DNS
-add address=c6890bdd8502.sn.mynetname.net list=mgmt
 add address=192.168.100.3 list=DNS
 add address=192.168.100.0/24 list=mgmt
 add address=192.168.100.8 list=DNS
