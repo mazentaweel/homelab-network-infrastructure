@@ -1,0 +1,5 @@
+# /system script "confirm-siteb-down" (sanitized)
+:if ([/tool netwatch get [find host="10.0.20.1"] status] = "down") do={
+    /tool fetch url="https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/sendMessage?chat_id=<TELEGRAM_CHAT_ID>&text=Site-B%20router%20VPN%20is%20Down" keep-result=no
+}
+:do { /system scheduler remove [find name="nw-down-siteb"] } on-error={}
